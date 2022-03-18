@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using StripeApi.Models;
-
-namespace SubscribeApi.Models
+﻿namespace SubscribeApi.Models
 {
     public class DbInteractor : DbContext
     {

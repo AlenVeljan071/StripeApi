@@ -1,16 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using PaymentStripeEngine;
-using Stripe;
-using Stripe.Checkout;
-using StripeApi.Models;
-using StripeApi.StripeBilingManager;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace StripeApi.Controllers
 {
@@ -67,7 +55,7 @@ namespace StripeApi.Controllers
             var cancelOptions = new SubscriptionUpdateOptions
             {
                 CancelAtPeriodEnd = true,
-                
+
             };
             var subscription = await service.UpdateAsync(req.Subscription, cancelOptions);
 
@@ -139,7 +127,7 @@ namespace StripeApi.Controllers
 
                 if (invoice.BillingReason == "subscription_create")
                 {
-                    
+
                     // Retrieve the payment intent used to pay the subscription
                     var service = new PaymentIntentService();
                     var paymentIntent = service.Get(invoice.PaymentIntentId);

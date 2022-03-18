@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace StripeApi.Models
+﻿namespace StripeApi.Models
 {
     public class Subscriber
     {

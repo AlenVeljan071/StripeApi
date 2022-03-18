@@ -1,13 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using PaymentStripeEngine;
-using Stripe;
-using StripeApi.Models;
-using SubscribeApi.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace StripeApi.StripeBilingManager
+﻿namespace StripeApi.StripeBilingManager
 {
     public class StripeBiling
     {
